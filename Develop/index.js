@@ -8,8 +8,12 @@ const questions = ["Title of your project", "Describe your project", "How to ins
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile
-
+    fs.writeFileSync(fileName, markdown(data), err => {
+        if (err) {
+            console.log(err);
+        }
+        console.log('README.md has been created');
+    });
 }
 
 // TODO: Create a function to initialize app
