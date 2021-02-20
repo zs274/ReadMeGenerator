@@ -56,6 +56,13 @@ function generateMarkdown(data) {
 
       ## Description
       ${data.description}
+
+      Section | About
+      --------|-------
+      [Installation](#installation) | How to install the application
+      [Usage](#installation) | How to use the application
+      [Test Instructions](#test-instructions) | How to test the application
+
       
       ## Installation
       ${data.installation}
