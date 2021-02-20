@@ -5,13 +5,13 @@
 function renderLicenseBadge(license) {
   switch (license) {
     case 'MIT':
-      return '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
+      return '![MIT license](https://img.shields.io/badge/License-MIT-yellow.svg)';
     case 'Apache':
-      return '![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)';
+      return '![Apache license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)';
     case 'GPL':
-      return '![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)';
+      return '![GPL license](https://img.shields.io/badge/License-GPLv3-blue.svg)';
     default:
-      "";
+      " ";
       break;
   }
 }
@@ -24,13 +24,13 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   switch (license) {
     case 'MIT':
-      return 'This project was created under the standard MIT license. \n Learn more [here:](https://opensource.org/licenses/MIT)';
+      return '\nThis project was created under the standard MIT license. \n Learn more [here:](https://opensource.org/licenses/MIT)';
     case 'Apache':
-      return 'This project was created under the standard Apache license. \n Learn more [here:](https://www.apache.org/licenses/)';
+      return '\nThis project was created under the standard Apache license. \n Learn more [here:](https://www.apache.org/licenses/)';
     case 'GPL':
-      return 'This project was created under the standard GPL license. \n Learn more [here:](https://www.gnu.org/licenses/gpl-3.0)';
+      return '\nThis project was created under the standard GPL license. \n Learn more [here:](https://www.gnu.org/licenses/gpl-3.0)';
     default:
-      "";
+      " ";
       break;
   }
 }
@@ -52,34 +52,34 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-    ${renderLicenseSection(data.license)}
+  ${renderLicenseSection(data.license)}
 
-    ## Description
-    ${data.description}
+  ## Description
+  ${data.description}
 
-    ## Contents
-    Section | About
-    --------|-------
-    [Installation](#installation) | How to install the application
-    [Usage](#usage) | How to use the application
-    [Testing](#testing) | How to test the application
+  ## Contents
+  Section | About
+  --------|-------
+  [Installation](#installation) | How to install the application
+  [Usage](#usage) | How to use the application
+  [Testing](#testing) | How to test the application
 
       
-    ## Installation
-    ${data.installation}
+  ## Installation
+  ${data.installation}
 
-    ## Usage
-    ${data.usage}
+  ## Usage
+  ${data.usage}
 
-    ## Contribution Guidelines
-    ${data.contributions}
+  ## Contribution Guidelines
+  ${data.contributions}
 
-    ## Testing
-    ${data.test}
+  ## Testing
+  ${data.test}
 
-    ## Questions
-    My GitHub username is ${data.gitusername}, and can be found with this [link](${data.gitlink}).
-    If you have any further questions you can email me at [${data.email}].
+  ## Questions
+  My GitHub username is ${data.gitusername}, and can be found with this [link](${data.gitlink}).
+  If you have any further questions you can email me at [${data.email}].
 `;
 }
 
