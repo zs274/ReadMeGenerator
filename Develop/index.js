@@ -71,6 +71,10 @@ function init() {
             name: 'email'
         },
         ])
+
+    .then((data) => 
+    writeToFile('README.md', data)
+    );
 }
 
 // Function call to initialize app
