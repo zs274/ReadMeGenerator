@@ -52,7 +52,26 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+      ${renderLicenseSection(data.license)}
 
+      ## Description
+      ${data.description}
+      
+      ## Installation
+      ${data.installation}
+
+      ## Usage
+      ${data.usage}
+
+      ## Contribution Guidelines
+      ${data.contributions}
+
+      ## Test Instructions
+      ${data.test}
+
+      ## Questions
+      My GitHub username is ${data.gitusername}, and can be found with this [link](${data.gitlink}).
+      If you have any further questions you can email me at [${data.email}].
 `;
 }
 
