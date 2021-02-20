@@ -21,7 +21,7 @@ function renderLicenseBadge(license) {
 
 
 // function that returns license link, default returns empty string
-function renderLicenseLink(license) { 
+function renderLicenseLink(license) {
   switch (license) {
     case 'MIT':
       return 'This project was created under the standard MIT license. \n Learn more here: (https://opensource.org/licenses/MIT)';
@@ -37,7 +37,17 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) { }
+
+// function that returns license section of README, empty string is returned if 'other' is chosen
+function renderLicenseSection(license) {
+  if (license !== 'Other') {
+    let licenseType = "## License \n" + renderLicenseBadge(license) + renderLicenseLink(license);
+    return licenseType;
+  }
+  else {
+    "";
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
